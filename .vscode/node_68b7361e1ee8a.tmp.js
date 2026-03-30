@@ -1,0 +1,19 @@
+// Source - https://stackoverflow.com/q/62610407
+// Posted by AdrianeZ - programuj, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-03-30, License - CC BY-SA 4.0
+
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "file": "${workspaceFolder}/index.html"
+    }
+  ]
+}

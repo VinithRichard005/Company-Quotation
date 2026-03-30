@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotation | Grace Heat Setting</title>
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container pattern-bg">
+      <div class="card">
+        <!-- HEADER -->
+        <header class="header">
+          <div class="header-main">
+            <h1>GRACE HEAT SETTING</h1>
+            <p class="subtitle">No. 440/1, Ganapathy Nagar, Tirupur</p>
+          </div>
+          <div class="contact-info">
+            <span class="badge"><i class="ph ph-receipt"></i> GSTIN: 33AGSPV1959K1ZK</span>
+            <span class="badge"><i class="ph ph-phone"></i> Mob: (+91) 98435 45888</span>
+          </div>
+        </header>
+
+        <hr class="divider" />
+
+        <!-- INFO SECTION -->
+        <section class="info-section">
+          <div class="input-group">
+            <label for="date-input">Date</label>
+            <div class="input-wrapper">
+              <i class="ph ph-calendar-blank"></i>
+              <input type="date" id="date-input" />
+            </div>
+          </div>
+          <div class="input-group to-group">
+            <label for="to-input">To</label>
+            <div class="input-wrapper">
+              <i class="ph ph-user"></i>
+              <input type="text" id="to-input" placeholder="Enter recipient name / company" />
+            </div>
+          </div>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section class="intro">
+          <p>Sir/Madam,</p>
+          <h3>MY RATE QUOTATION FOR HEAT SETTING CHARGES</h3>
+        </section>
+
+        <!-- TABLE -->
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th width="15%">Weight (Kg)</th>
+                <th width="18%">Rate/Kg (₹)</th>
+                <th width="18%">Total (₹)</th>
+                <th width="10%" class="actions-header">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <td>
+                    <textarea class="desc-input" rows="1" placeholder="Enter description..."></textarea>
+                </td>
+                <td>
+                  <input type="number" class="weight" oninput="calculate()" placeholder="0" min="0" />
+                </td>
+                <td>
+                  <input type="number" class="rate" oninput="calculate()" placeholder="0" min="0" />
+                </td>
+                <td class="rowTotal font-mono">0.00</td>
+                <td class="actions-cell">
+                  <button class="icon-btn delete-btn" onclick="deleteRow(this)" title="Delete Row">
+                    <i class="ph ph-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <button class="btn btn-secondary" onclick="addRow()">
+          <i class="ph ph-plus-circle"></i> Add Row
+        </button>
+
+        <!-- TOTALS -->
+        <section class="totals-section">
+          <div class="totals-card">
+            <div class="total-row">
+              <span class="label">Total Weight:</span>
+              <span class="value"><span id="totalWeight" class="font-mono">0.00</span> Kg</span>
+            </div>
+            <div class="total-row highlight">
+              <span class="label">Total Amount:</span>
+              <span class="value">₹ <span id="totalAmount" class="font-mono">0.00</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div class="signatures">
+            <div class="sign-block">
+              <p class="regards">Regards,</p>
+              <p class="name">Vimal</p>
+            </div>
+            <div class="sign-block seal">
+              <div class="seal-space"></div>
+              <p>Authorized Signature & Seal</p>
+            </div>
+          </div>
+          <p class="thank-you">Thank you for your business!</p>
+        </footer>
+
+        <!-- FLOATING PRINT BUTTON -->
+        <button class="btn btn-primary print-fab" onclick="window.print()" title="Print Document">
+          <i class="ph ph-printer"></i> Print
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
