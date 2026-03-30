@@ -19,10 +19,11 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
+  display: grid;
 }
 
 /* Background Pattern for Web */
@@ -41,7 +42,9 @@ body {
   background: var(--card-bg);
   border-radius: 16px;
   padding: 40px 48px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.05),
+    0 4px 10px rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
@@ -159,8 +162,8 @@ tbody input[type="number"] {
 }
 
 .desc-input {
-    resize: vertical;
-    min-height: 42px;
+  resize: vertical;
+  min-height: 42px;
 }
 
 input:focus,
@@ -169,11 +172,11 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-tbody input:focus, tbody textarea:focus {
-    background: var(--card-bg);
-    border-color: var(--primary-color);
+tbody input:focus,
+tbody textarea:focus {
+  background: var(--card-bg);
+  border-color: var(--primary-color);
 }
-
 
 /* Intro */
 .intro {
@@ -286,8 +289,9 @@ tr:last-child td {
   font-size: 18px;
 }
 
-.actions-cell, .actions-header {
-    text-align: center;
+.actions-cell,
+.actions-header {
+  text-align: center;
 }
 
 .delete-btn {
@@ -365,7 +369,7 @@ tr:last-child td {
   body {
     background: white;
   }
-  
+
   .pattern-bg {
     padding: 0;
     min-height: auto;
@@ -380,34 +384,38 @@ tr:last-child td {
     border-radius: 0;
   }
 
-  .btn, .print-fab, .actions-header, .actions-cell {
+  .btn,
+  .print-fab,
+  .actions-header,
+  .actions-cell {
     display: none !important;
   }
 
-  input, textarea {
+  input,
+  textarea {
     border: none !important;
     background: transparent !important;
     padding: 0 !important;
     font-size: 14px;
     resize: none;
   }
-  
+
   .input-wrapper i {
-      display: none;
+    display: none;
   }
-  
+
   .input-wrapper input {
-      padding-left: 0;
+    padding-left: 0;
   }
 
   .badge {
     background: transparent;
     padding: 0;
   }
-  
+
   .table-container {
-      border: 1px solid #000;
-      border-radius: 0;
+    border: 1px solid #000;
+    border-radius: 0;
   }
 
   th {
@@ -420,10 +428,10 @@ tr:last-child td {
   td {
     border-bottom: 1px solid #e2e8f0;
   }
-  
+
   .totals-card {
-      background: transparent;
-      padding: 0;
+    background: transparent;
+    padding: 0;
   }
 }
 
