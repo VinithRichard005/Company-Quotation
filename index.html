@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,8 +25,12 @@
             <p class="subtitle">No. 440/1, Ganapathy Nagar, Tirupur</p>
           </div>
           <div class="contact-info">
-            <span class="badge"><i class="ph ph-receipt"></i> GSTIN: 33AGSPV1959K1ZK</span>
-            <span class="badge"><i class="ph ph-phone"></i> Mob: (+91) 98435 45888</span>
+            <span class="badge"
+              ><i class="ph ph-receipt"></i> GSTIN: 33AGSPV1959K1ZK</span
+            >
+            <span class="badge"
+              ><i class="ph ph-phone"></i> Mob: (+91) 98435 45888</span
+            >
           </div>
         </header>
 
@@ -45,14 +49,30 @@
             <label for="to-input">To</label>
             <div class="input-wrapper">
               <i class="ph ph-user"></i>
-              <input type="text" id="to-input" placeholder="Enter recipient name / company" />
+              <input
+                type="text"
+                id="to-input"
+                placeholder="Enter recipient name / company"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="address">Address</label>
+            <div class="input-wrapper">
+              <i class="ph ph-map-pin"></i>
+              <textarea
+                id="address"
+                class="desc-input"
+                rows="3"
+                placeholder="Enter full address"
+              ></textarea>
             </div>
           </div>
         </section>
 
         <!-- INTRODUCTION -->
         <section class="intro">
-          <p>Sir/Madam,</p>
+          <p>Dear Sir/Madam,</p>
           <h3>MY RATE QUOTATION FOR HEAT SETTING CHARGES</h3>
         </section>
 
@@ -62,26 +82,28 @@
             <thead>
               <tr>
                 <th>Description</th>
-                <th width="15%">Weight (Kg)</th>
                 <th width="18%">Rate/Kg (₹)</th>
-                <th width="18%">Total (₹)</th>
                 <th width="10%" class="actions-header">Action</th>
               </tr>
             </thead>
             <tbody id="tbody">
               <tr>
                 <td>
-                    <textarea class="desc-input" rows="1" placeholder="Enter description..."></textarea>
+                  <textarea
+                    class="desc-input"
+                    rows="1"
+                    placeholder="Enter description..."
+                  ></textarea>
                 </td>
                 <td>
-                  <input type="number" class="weight" oninput="calculate()" placeholder="0" min="0" />
+                  <input type="number" class="rate" placeholder="0" min="0" />
                 </td>
-                <td>
-                  <input type="number" class="rate" oninput="calculate()" placeholder="0" min="0" />
-                </td>
-                <td class="rowTotal font-mono">0.00</td>
                 <td class="actions-cell">
-                  <button class="icon-btn delete-btn" onclick="deleteRow(this)" title="Delete Row">
+                  <button
+                    class="icon-btn delete-btn"
+                    onclick="deleteRow(this)"
+                    title="Delete Row"
+                  >
                     <i class="ph ph-trash"></i>
                   </button>
                 </td>
@@ -94,21 +116,61 @@
           <i class="ph ph-plus-circle"></i> Add Row
         </button>
 
-        <!-- TOTALS -->
-        <section class="totals-section">
-          <div class="totals-card">
-            <div class="total-row">
-              <span class="label">Total Weight:</span>
-              <span class="value"><span id="totalWeight" class="font-mono">0.00</span> Kg</span>
-            </div>
-            <div class="total-row highlight">
-              <span class="label">Total Amount:</span>
-              <span class="value">₹ <span id="totalAmount" class="font-mono">0.00</span></span>
+        <!-- GST SECTION -->
+        <section class="gst-section">
+          <div class="input-group">
+            <label for="gst-input">GST Number</label>
+            <div class="input-wrapper">
+              <i class="ph ph-receipt"></i>
+              <input
+                type="text"
+                id="gst-input"
+                placeholder="Enter GST number"
+              />
             </div>
           </div>
         </section>
 
-        <!-- FOOTER -->
+        <!-- BANK DETAILS -->
+        <section class="bank-section">
+          <h3>Bank Details</h3>
+          <div class="input-group">
+            <label for="account-name">Account Name</label>
+            <div class="input-wrapper">
+              <i class="ph ph-user"></i>
+              <input
+                type="text"
+                id="account-name"
+                placeholder="Enter account name"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="account-number">Account Number</label>
+            <div class="input-wrapper">
+              <i class="ph ph-credit-card"></i>
+              <input
+                type="text"
+                id="account-number"
+                placeholder="Enter account number"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="ifsc">IFSC Code</label>
+            <div class="input-wrapper">
+              <i class="ph ph-code"></i>
+              <input type="text" id="ifsc" placeholder="Enter IFSC code" />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="branch">Branch</label>
+            <div class="input-wrapper">
+              <i class="ph ph-building"></i>
+              <input type="text" id="branch" placeholder="Enter branch" />
+            </div>
+          </div>
+        </section>
         <footer class="footer">
           <div class="signatures">
             <div class="sign-block">
@@ -124,7 +186,11 @@
         </footer>
 
         <!-- FLOATING PRINT BUTTON -->
-        <button class="btn btn-primary print-fab" onclick="window.print()" title="Print Document">
+        <button
+          class="btn btn-primary print-fab"
+          onclick="window.print()"
+          title="Print Document"
+        >
           <i class="ph ph-printer"></i> Print
         </button>
       </div>

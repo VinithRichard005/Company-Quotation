@@ -102,8 +102,30 @@ body {
 /* Info Section */
 .info-section {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
   margin-bottom: 32px;
+}
+
+.gst-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.bank-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.bank-section h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--text-main);
+  font-weight: 600;
 }
 
 .input-group {
@@ -172,6 +194,10 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
+.input-wrapper textarea {
+  padding-left: 36px;
+}
+
 tbody input:focus,
 tbody textarea:focus {
   background: var(--card-bg);
@@ -222,13 +248,6 @@ td {
 
 tr:last-child td {
   border-bottom: none;
-}
-
-.rowTotal {
-  padding: 12px 16px;
-  color: var(--text-main);
-  font-weight: 600;
-  vertical-align: middle;
 }
 
 /* Buttons */
@@ -303,35 +322,6 @@ tr:last-child td {
   color: var(--danger);
 }
 
-/* Totals */
-.totals-section {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 24px;
-}
-
-.totals-card {
-  background: var(--input-bg);
-  padding: 24px;
-  border-radius: 12px;
-  width: 300px;
-}
-
-.total-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  font-size: 15px;
-}
-.total-row.highlight {
-  margin-bottom: 0;
-  padding-top: 12px;
-  border-top: 1px dashed var(--border-color);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
 /* Footer */
 .footer {
   margin-top: 60px;
@@ -382,6 +372,7 @@ tr:last-child td {
     padding: 0;
     box-shadow: none;
     border-radius: 0;
+    page-break-inside: avoid;
   }
 
   .btn,
@@ -408,9 +399,50 @@ tr:last-child td {
     padding-left: 0;
   }
 
+  .input-wrapper textarea {
+    padding-left: 0;
+  }
+
   .badge {
     background: transparent;
     padding: 0;
+  }
+
+  .info-section,
+  .gst-section,
+  .bank-section {
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  .input-group label {
+    font-size: 10px;
+  }
+
+  input,
+  textarea {
+    font-size: 12px;
+  }
+
+  .header {
+    margin-bottom: 16px;
+  }
+
+  .intro {
+    margin-bottom: 16px;
+  }
+
+  .table-container {
+    margin-bottom: 8px;
+  }
+
+  .footer {
+    margin-top: 16px;
+  }
+
+  .bank-section h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
   }
 
   .table-container {
@@ -437,5 +469,5 @@ tr:last-child td {
 
 @page {
   size: A4;
-  margin: 15mm 20mm;
+  margin: 10mm 15mm;
 }
