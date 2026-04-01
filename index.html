@@ -57,6 +57,17 @@
             </div>
           </div>
           <div class="input-group">
+            <label for="gst-input">GST Number</label>
+            <div class="input-wrapper">
+              <i class="ph ph-receipt"></i>
+              <input
+                type="text"
+                id="gst-input"
+                placeholder="Enter GST number"
+              />
+            </div>
+          </div>
+          <div class="input-group">
             <label for="address">Address</label>
             <div class="input-wrapper">
               <i class="ph ph-map-pin"></i>
@@ -115,60 +126,16 @@
         <button class="btn btn-secondary" onclick="addRow()">
           <i class="ph ph-plus-circle"></i> Add Row
         </button>
-
-        <!-- GST SECTION -->
-        <section class="gst-section">
-          <div class="input-group">
-            <label for="gst-input">GST Number</label>
-            <div class="input-wrapper">
-              <i class="ph ph-receipt"></i>
-              <input
-                type="text"
-                id="gst-input"
-                placeholder="Enter GST number"
-              />
-            </div>
-          </div>
-        </section>
-
+        <br />
+        <br />
         <!-- BANK DETAILS -->
         <section class="bank-section">
           <h3>Bank Details</h3>
-          <div class="input-group">
-            <label for="account-name">Account Name</label>
-            <div class="input-wrapper">
-              <i class="ph ph-user"></i>
-              <input
-                type="text"
-                id="account-name"
-                placeholder="Enter account name"
-              />
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="account-number">Account Number</label>
-            <div class="input-wrapper">
-              <i class="ph ph-credit-card"></i>
-              <input
-                type="text"
-                id="account-number"
-                placeholder="Enter account number"
-              />
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="ifsc">IFSC Code</label>
-            <div class="input-wrapper">
-              <i class="ph ph-code"></i>
-              <input type="text" id="ifsc" placeholder="Enter IFSC code" />
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="branch">Branch</label>
-            <div class="input-wrapper">
-              <i class="ph ph-building"></i>
-              <input type="text" id="branch" placeholder="Enter branch" />
-            </div>
+          <div class="bank-details-box">
+            <span><strong>Account Name:</strong> GRACE HEAT SETTING</span>
+            <span><strong>Account Number:</strong> 10260000690456</span>
+            <span><strong>IFSC Code:</strong> ESMF0001371</span>
+            <span><strong>Branch:</strong> Ondiputhur, Singanallur</span>
           </div>
         </section>
         <footer class="footer">
